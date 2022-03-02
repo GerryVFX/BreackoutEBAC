@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8356090410821088898
+--- !u!1 &688255051955650823
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3371836778515262122}
-  - component: {fileID: 3031808526569274348}
-  - component: {fileID: 6505638459010625772}
-  - component: {fileID: 8790148090073711573}
-  - component: {fileID: 64746524064363454}
-  - component: {fileID: 3551307338744880231}
+  - component: {fileID: 2815336114698512722}
+  - component: {fileID: 5720045695629682899}
+  - component: {fileID: 4327392827596158579}
+  - component: {fileID: 2785623823254562541}
+  - component: {fileID: 7911961284795666362}
+  - component: {fileID: 7104808720747845651}
   m_Layer: 0
-  m_Name: BlockWood
-  m_TagString: Block
+  m_Name: BlockRoca
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3371836778515262122
+--- !u!4 &2815336114698512722
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 1, z: 4}
@@ -35,21 +35,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3031808526569274348
+--- !u!33 &5720045695629682899
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6505638459010625772
+--- !u!23 &4327392827596158579
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c892279be432dfe448f40860872cfac6, type: 2}
+  - {fileID: 2100000, guid: a6d9b187192cd6f469127c97c8a5ad2f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,26 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8790148090073711573
+--- !u!65 &2785623823254562541
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &64746524064363454
+--- !u!54 &7911961284795666362
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -113,18 +113,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &3551307338744880231
+--- !u!114 &7104808720747845651
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356090410821088898}
+  m_GameObject: {fileID: 688255051955650823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8333661f2c2a57a4ea0f89a9f534299f, type: 3}
+  m_Script: {fileID: 11500000, guid: 96cdaf754e167084296049dba6adc1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resistencia: 0
+  numMaterial: 0
+  recistencia: 0
+  material: 
   ball: {fileID: 7361870014562365733, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
-  especial: 0
+  padle: {fileID: 5148470048442981903, guid: e5de9733df877904d988bf83af0be236, type: 3}

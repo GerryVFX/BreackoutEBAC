@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Rock
   - Wood
-  - special
   - ball
   - Block
+  - Special
+  - SpecialB
   layers:
   - Default
   - TransparentFX
