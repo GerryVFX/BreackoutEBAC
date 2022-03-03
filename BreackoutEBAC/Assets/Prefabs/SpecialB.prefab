@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1696405730659825541}
   - component: {fileID: 1303573189561200501}
   - component: {fileID: 544677496073751648}
-  - component: {fileID: 6150715480308406781}
+  - component: {fileID: 7028536105407071000}
   m_Layer: 0
   m_Name: SpecialB
   m_TagString: SpecialB
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &6150715480308406781
+--- !u!114 &7028536105407071000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1209139498282532850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cdaf754e167084296049dba6adc1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: e17418c3e54e9bb4498b786d44bdded5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numMaterial: 0
-  recistencia: 0
-  material: 
-  ball: {fileID: 7361870014562365733, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
-  padle: {fileID: 5148470048442981903, guid: e5de9733df877904d988bf83af0be236, type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4327392827596158579}
   - component: {fileID: 2785623823254562541}
   - component: {fileID: 7911961284795666362}
-  - component: {fileID: 7104808720747845651}
+  - component: {fileID: -8241943300070194479}
   m_Layer: 0
   m_Name: BlockRoca
   m_TagString: Rock
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &7104808720747845651
+--- !u!114 &-8241943300070194479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 688255051955650823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cdaf754e167084296049dba6adc1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: e44fc9fc345e5db4fb917c3c7b6aa1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numMaterial: 0
-  recistencia: 0
-  material: 
-  ball: {fileID: 7361870014562365733, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
-  padle: {fileID: 5148470048442981903, guid: e5de9733df877904d988bf83af0be236, type: 3}

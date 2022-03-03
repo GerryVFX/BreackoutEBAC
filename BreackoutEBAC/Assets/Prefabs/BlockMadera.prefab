@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3324447059605808798}
   - component: {fileID: 7627696025929960969}
   - component: {fileID: 7555843757582542286}
-  - component: {fileID: 6651084981461171595}
+  - component: {fileID: 2012275095794628080}
   m_Layer: 0
   m_Name: BlockMadera
   m_TagString: Wood
@@ -113,7 +113,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!114 &6651084981461171595
+--- !u!114 &2012275095794628080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +122,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2570035303205192108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cdaf754e167084296049dba6adc1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: e2404e810c000574e9a6c0bfba61d881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numMaterial: 0
-  recistencia: 0
-  material: 
-  ball: {fileID: 7361870014562365733, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
-  padle: {fileID: 5148470048442981903, guid: e5de9733df877904d988bf83af0be236, type: 3}
