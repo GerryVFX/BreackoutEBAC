@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5686892462724908631}
   m_Layer: 0
   m_Name: SpecialA
-  m_TagString: Special
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,3 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83005eedf17f99f478330106de65ed28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recistencia: 0
+  fuerzaRebote: 0
+  special: 1
+  player: {fileID: 0}
