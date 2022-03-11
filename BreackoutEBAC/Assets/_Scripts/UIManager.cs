@@ -10,22 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject miPanel;
 
 
-    public void Update()
-    {
-        if (Input.GetButton("Cancel"))
-        {
-            if (!inMenu)
-            {
-                inMenu = true;
-                miPanel.SetActive(true);
-            }
-            else
-            {
-                inMenu = false;
-                miPanel.SetActive(false);
-            }
-        }
-    }
+    
     public  void ButtonMenu()
     {
         if (!inMenu)
@@ -43,6 +28,11 @@ public class UIManager : MonoBehaviour
     public void Reinicio()
     {
         SceneManager.LoadScene("Nivel 1");
+    }
+
+    public void Salir()
+    {
+        Application.Quit();
     }
 
     public void mandoMouse()

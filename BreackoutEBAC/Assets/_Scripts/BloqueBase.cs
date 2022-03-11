@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BloqueBase : MonoBehaviour
 {
-    public int recistencia;
-    public int fuerzaRebote;
+    public int         recistencia;
+    public int         fuerzaRebote;
+    public PuntajeAlto puntajeALtoSO;
 
-    
-    
-    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +41,9 @@ public class BloqueBase : MonoBehaviour
     {
         if (other.tag == "ball")
         {
-            GameObject puntos=GameObject.Find("Display");
-            puntos.GetComponent<Puntaje>().puntos =+ 20;
+            GameObject mispuntos=GameObject.Find("Display");
+            puntajeALtoSO.puntaje += 20;
+            
         }
     }
 }

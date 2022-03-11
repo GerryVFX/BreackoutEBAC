@@ -51,4 +51,12 @@ public class Ball : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Block"|| other.tag=="Finish")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 }

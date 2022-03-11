@@ -12,6 +12,7 @@ public class Padle : MonoBehaviour
     [SerializeField] int padleLimit = 24;
 
     public bool selectorControl;
+    public GameObject bola;
 
     //Variables para control por teclado
     [SerializeField] float padleSpeed = 50f;
@@ -35,7 +36,9 @@ public class Padle : MonoBehaviour
                 StartCoroutine(SpecialPadle());
                 specialP = false;
         }
-       
+
+
+        GeneraBolla();
     }
 
     public IEnumerator SpecialPadle()
@@ -76,5 +79,14 @@ public class Padle : MonoBehaviour
         if (pos.x < -padleLimit) pos.x = -padleLimit;
         else if (pos.x > padleLimit) pos.x = padleLimit;
         this.transform.position = pos;
+    }
+
+    public void GeneraBolla()
+    {
+        
+        if (GameObject.FindGameObjectWithTag("ball")==null)
+        {
+            Instantiate(bola);
+        }
     }
 }

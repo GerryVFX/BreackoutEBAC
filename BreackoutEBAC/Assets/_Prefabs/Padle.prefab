@@ -129,4 +129,5 @@ MonoBehaviour:
   specialP: 0
   padleLimit: 24
   selectorControl: 0
+  bola: {fileID: 7361870014562365733, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
   padleSpeed: 50
