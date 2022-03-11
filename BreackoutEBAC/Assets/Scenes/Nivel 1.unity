@@ -2337,7 +2337,7 @@ MonoBehaviour:
   PuntajeActual: {fileID: 955515364}
   MejorPuntaje: {fileID: 1250238009}
   puntos: 0
-  mejorPuntos: 100
+  mejorPuntos: 0
 --- !u!1001 &2099464007
 PrefabInstance:
   m_ObjectHideFlags: 0

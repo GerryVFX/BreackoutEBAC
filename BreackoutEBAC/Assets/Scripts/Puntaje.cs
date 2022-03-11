@@ -10,7 +10,7 @@ public class Puntaje : MonoBehaviour
     public TMP_Text  PuntajeActual;
     public TMP_Text  MejorPuntaje;
     public int       puntos = 0;
-    public int       mejorPuntos = 100;
+    public int       mejorPuntos;
 
     // Start is called before the first frame update
     void Start()
