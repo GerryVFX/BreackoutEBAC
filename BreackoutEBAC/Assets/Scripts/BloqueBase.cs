@@ -36,4 +36,13 @@ public class BloqueBase : MonoBehaviour
     {
         if (recistencia <= 0) Destroy(this.gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "ball")
+        {
+            GameObject puntos=GameObject.Find("Display");
+            puntos.GetComponent<Puntaje>().puntos =+ 20;
+        }
+    }
 }

@@ -15,7 +15,7 @@ public class Padle : MonoBehaviour
 
     //Variables para control por teclado
     [SerializeField] float padleSpeed = 50f;
-    Transform transform;
+    new Transform  transform;
 
     void Start()
     {
