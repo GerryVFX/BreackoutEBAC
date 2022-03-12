@@ -1,17 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BloqueBase : MonoBehaviour
 {
     public int         recistencia;
     public int         fuerzaRebote;
-    public PuntajeAlto puntajeALtoSO;
+    public UnityEvent aumentarPuntos;
+
+    //public PuntajeAlto puntajeALtoSO;
 
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "ball")
+        {
+            RebotarBola(collision);
+        }
+    }
 
+    public virtual void RebotarBola(Collision collision)
+    {
+        Vector3 direccion = collision.contacts[0].point - transform.position;
+        direccion = direccion.normalized;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direccion;
+        recistencia--;
+    }
 
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -29,7 +46,7 @@ public class BloqueBase : MonoBehaviour
 
     public virtual void RebotarBola()
     {
-        fuerzaRebote = 5;
+        
     }
 
     public virtual void DestrucionDeBloque()
@@ -37,13 +54,13 @@ public class BloqueBase : MonoBehaviour
         if (recistencia <= 0) Destroy(this.gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "ball")
-        {
-            GameObject mispuntos=GameObject.Find("Display");
-            puntajeALtoSO.puntaje += 20;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.tag == "ball")
+    //    {
+    //        GameObject mispuntos=GameObject.Find("Display");
+    //        puntajeALtoSO.puntaje += 20;
             
-        }
-    }
+    //    }
+    //}
 }

@@ -16,9 +16,9 @@ public class BloqueEspecialA : BloqueBase
         recistencia = 3;
     }
 
-    public override void RebotarBola()
+    public override void RebotarBola(Collision collision)
     {
-        base.RebotarBola();
+        base.RebotarBola(collision);
         fuerzaRebote = 15;
     }
 

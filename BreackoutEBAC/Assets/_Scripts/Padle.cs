@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class Padle : MonoBehaviour
@@ -38,13 +40,13 @@ public class Padle : MonoBehaviour
         }
 
 
-        GeneraBolla();
+        //GeneraBolla();
     }
 
     public IEnumerator SpecialPadle()
     {
         gameObject.transform.localScale = new Vector3(1, 6, 2);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         gameObject.transform.localScale = new Vector3(1, 4, 2);
         yield return null;        
     }
@@ -62,17 +64,21 @@ public class Padle : MonoBehaviour
         this.transform.position = pos;
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "ball")
+        {
+            Vector3 direccion = collision.contacts[0].point - transform.position;
+            direccion = direccion.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direccion;
+        }
+    }
+
+    
+
     public void ControlTeclado()
     {
-        //if (Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    transform.Translate(Vector3.down * padleSpeed * Time.deltaTime);
-        //}
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    transform.Translate(Vector3.up * padleSpeed * Time.deltaTime);
-        //}
-
+        
         transform.Translate(Input.GetAxis("Horizontal")* Vector3.down * padleSpeed * Time.deltaTime);
 
         Vector3 pos = this.transform.position;  
@@ -81,12 +87,5 @@ public class Padle : MonoBehaviour
         this.transform.position = pos;
     }
 
-    public void GeneraBolla()
-    {
-        
-        if (GameObject.FindGameObjectWithTag("ball")==null)
-        {
-            Instantiate(bola);
-        }
-    }
+    
 }

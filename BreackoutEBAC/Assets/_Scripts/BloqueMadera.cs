@@ -10,9 +10,9 @@ public class BloqueMadera : BloqueBase
         recistencia = 2;
     }
 
-    public override void RebotarBola()
+    public override void RebotarBola(Collision collision)
     {
-        base.RebotarBola();
+        base.RebotarBola(collision);
         fuerzaRebote = 10;
         
     }
