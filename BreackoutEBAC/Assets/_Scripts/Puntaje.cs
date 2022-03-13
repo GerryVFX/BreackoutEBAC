@@ -25,22 +25,12 @@ public class Puntaje : MonoBehaviour
         puntajeAltoSO.Cargar();
         MejorPuntaje.text = $"Mejor Puntaje: {puntajeAltoSO.puntajeAlto}";
         puntajeAltoSO.puntaje = 0;
-        //Guardado por PlayerPrefs
-        //if (PlayerPrefs.HasKey("MejorPuntaje"))
-        //{
-        //    mejorPuntos = PlayerPrefs.GetInt("MejorPuntaje");
-        //}
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        //Vinculación de puntaje a UI
-
-        
+        //Vinculación de puntaje a UI       
         PuntajeActual.text = $"Puntaje Actual: {puntajeAltoSO.puntaje}";
         if (puntajeAltoSO.puntaje > puntajeAltoSO.puntajeAlto)
         {
@@ -48,9 +38,10 @@ public class Puntaje : MonoBehaviour
             MejorPuntaje.text = $"Mejor Puntaje: {puntajeAltoSO.puntajeAlto}";
             puntajeAltoSO.Guardar();
         }
+    }
 
-        //Guardado de puntos PlayerPrefs
-        //PlayerPrefs.SetInt("MejorPuntaje", puntos);
-
+    public void AumentarPuntaje(int puntos)
+    {
+        puntajeAltoSO.puntaje += puntos;
     }
 }
