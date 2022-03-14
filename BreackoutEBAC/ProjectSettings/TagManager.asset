@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Rock
+  - Wood
+  - ball
+  - Block
+  - Special
+  - SpecialB
   layers:
   - Default
   - TransparentFX
