@@ -147,3 +147,4 @@ Received Import Request.
 Start importing Assets/_Scripts/DropDownDificultad.cs using Guid(ab1dea33e9a174b4686ac67ef2462f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03c324b5daa0201602942d917e9542b1') in 0.031735 seconds 
   Import took 0.033786 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
