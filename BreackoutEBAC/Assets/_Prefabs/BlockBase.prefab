@@ -125,20 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 975ef74654db9c747bb23cd243916023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recistencia: 0
-  fuerzaRebote: 0
-  aumentarPuntos:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Puntaje, Assembly-CSharp
-        m_MethodName: AumentarPuntaje
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  resistance: 0
+  pointsScore: 0
+  material: 
+  pointsSO: {fileID: 11400000, guid: ec1a007dd6bdaf84693568385912e28d, type: 2}
+  direccion: {x: 0, y: 0, z: 0}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Opciones
   m_EditorClassIdentifier: 
   ballSpeed: 30
-  levelDificult: 0
+  levelDificult: 1

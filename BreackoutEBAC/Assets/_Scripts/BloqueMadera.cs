@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class BloqueMadera : BloqueBase
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public override void Start()
     {
-        recistencia = 2;
+        resistance  =      2;
+        material    = "Wood";
+        pointsScore =     20;
     }
 
-    public override void RebotarBola(Collision collision)
-    {
-        base.RebotarBola(collision);
-        fuerzaRebote = 10;
-        
-    }
+    //public override void RebotarBola(Collision collision)
+    //{
+    //    base.RebotarBola(collision);
+    //    fuerzaRebote = 10;
+
+    //}
 }

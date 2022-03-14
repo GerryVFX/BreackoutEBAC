@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2404e810c000574e9a6c0bfba61d881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recistencia: 0
-  fuerzaRebote: 0
-  aumentarPuntos:
-    m_PersistentCalls:
-      m_Calls: []
+  resistance: 0
+  pointsScore: 0
+  material: 
+  pointsSO: {fileID: 11400000, guid: ec1a007dd6bdaf84693568385912e28d, type: 2}
+  direccion: {x: 0, y: 0, z: 0}

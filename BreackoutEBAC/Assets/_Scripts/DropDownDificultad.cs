@@ -8,10 +8,12 @@ public class DropDownDificultad : MonoBehaviour
     public Opciones options;
     private Dropdown dificult;
 
+
     public void Start()
     {
         dificult = GetComponent<Dropdown>();
         dificult.onValueChanged.AddListener(delegate { options.ChangeDificult(dificult.value); });
 
+        
     }
 }

@@ -8,6 +8,7 @@ public class Opciones : PuntosPercistente
 {
     public float ballSpeed = 30;
     public dificult levelDificult = dificult.easy;
+    
 
     public enum dificult
     {
@@ -22,5 +23,26 @@ public class Opciones : PuntosPercistente
     public void ChangeDificult(int newDificult)
     {
         levelDificult = (dificult)newDificult;
+
+        GameObject ball = GameObject.FindGameObjectWithTag("ball");
+        Ball ballF = ball.GetComponent<Ball>();
+
+        if (levelDificult == dificult.easy)
+        {
+            ballF.ballForce = 3;
+        }
+        else if (levelDificult == dificult.nomral)
+        {
+            ballF.ballForce = 2;
+        }
+        else if (levelDificult == dificult.hard)
+        {
+            ballF.ballForce = 1;
+        }
+    }
+
+    public void BallDificult()
+    {
+        
     }
 }

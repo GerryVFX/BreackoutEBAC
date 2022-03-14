@@ -5,24 +5,33 @@ using UnityEngine.Events;
 
 public class Ball : MonoBehaviour
 {
+    public int ballForce;
     bool isGameStarted = false;
     public float ballSpeed = 25f;
+    public UnityEvent miDificultad;
+
 
     Vector3 ultimaPosición = Vector3.zero;
     Vector3 direccion = Vector3.zero;
     new Rigidbody rigidbody;
     private Limites limites;
     public UnityEvent bolaDestrida;
+    public GameObject block;
+    public BloqueBase blockB;
 
     public void Awake()
     {
         limites = GetComponent<Limites>();
+        
     }
 
 
-    // Start is called before the first frame update
+   
     void Start()
     {
+        ballForce = 1;
+        
+
         Vector3 inicial = GameObject.FindGameObjectWithTag("Player").transform.position;
         inicial.y +=  1.6f;
         this.transform.position = inicial;
@@ -30,7 +39,7 @@ public class Ball : MonoBehaviour
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (limites.salioAbajo)
@@ -119,6 +128,20 @@ public class Ball : MonoBehaviour
         limites.enabled=true;
     }
 
-    
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Block")
+        {
+            BlockCollision(collision);
+        }
+    }
+
+    public virtual void BlockCollision(Collision collision)
+    {
+        GameObject block = GameObject.FindGameObjectWithTag("Block");
+        BloqueBase directionC = block.GetComponent<BloqueBase>();
+        
+        rigidbody.velocity = directionC.direction * ballSpeed;
+    }
 
 }

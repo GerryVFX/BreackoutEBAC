@@ -5,14 +5,16 @@ using UnityEngine;
 public class BloqueRoca : BloqueBase
 {
     // Start is called before the first frame update
-    void Start()
+    public override void Start()
     {
-        recistencia = 4;
+        resistance  =      4;
+        material    = "Rock";
+        pointsScore =     50;
     }
 
-    public override void RebotarBola(Collision collision)
-    {
-        base.RebotarBola(collision);
-        fuerzaRebote = 3;
-    }
+    //public override void RebotarBola(Collision collision)
+    //{
+    //    base.RebotarBola(collision);
+    //    fuerzaRebote = 3;
+    //}
 }

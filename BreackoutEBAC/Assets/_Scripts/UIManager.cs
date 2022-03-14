@@ -35,15 +35,15 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void mandoMouse()
-    {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Padle>().selectorControl = true;
-    }
+    //public void mandoMouse()
+    //{
+    //    GameObject.FindGameObjectWithTag("Player").GetComponent<Padle>().selectorControl = true;
+    //}
 
-    public void mandoMando()
-    {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Padle>().selectorControl = false;
-    }
+    //public void mandoMando()
+    //{
+    //    GameObject.FindGameObjectWithTag("Player").GetComponent<Padle>().selectorControl = false;
+    //}
 
 
 }

@@ -4,35 +4,36 @@ using UnityEngine;
 
 public class BloqueEspecialA : BloqueBase
 {
-    [SerializeField]
-    bool special=true;
+    //[SerializeField]
+    //bool special
 
-    public Padle player;
+    //public Padle player;
 
     // Start is called before the first frame update
-    void Start()
+    public override void  Start()
     {
-        player = FindObjectOfType<Padle>();
-        recistencia = 3;
+        resistance = 3;
+        material = "SpecialA";
+        pointsScore = 30;
     }
 
-    public override void RebotarBola(Collision collision)
-    {
-        base.RebotarBola(collision);
-        fuerzaRebote = 15;
-    }
+    //public override void RebotarBola(Collision collision)
+    //{
+    //    base.RebotarBola(collision);
+    //    fuerzaRebote = 15;
+    //}
 
-    public override void DestrucionDeBloque()
-    {
-        base.DestrucionDeBloque();
+    //public override void DestrucionDeBloque()
+    //{
+    //    base.DestrucionDeBloque();
 
-        if (recistencia <= 0 && special)
-        {
+    //    if (recistencia <= 0 && special)
+    //    {
 
-            player.specialP = true;
-            Destroy(this.gameObject);
+    //        player.specialP = true;
+    //        Destroy(this.gameObject);
 
-        }
+    //    }
 
-    }
+    //}
 }
