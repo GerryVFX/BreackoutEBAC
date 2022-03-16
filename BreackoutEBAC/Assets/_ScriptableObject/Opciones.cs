@@ -22,6 +22,7 @@ public class Opciones : PuntosPercistente
 
     public void ChangeDificult(int newDificult)
     {
+        levelDificult = dificult.nomral;
         levelDificult = (dificult)newDificult;
 
         GameObject ball = GameObject.FindGameObjectWithTag("ball");
@@ -39,10 +40,5 @@ public class Opciones : PuntosPercistente
         {
             ballF.ballForce = 1;
         }
-    }
-
-    public void BallDificult()
-    {
-        
     }
 }

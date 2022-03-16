@@ -11,9 +11,7 @@ public class BloqueBase : MonoBehaviour
     public int         pointsScore;
     public string         material;
     public PuntajeAlto    pointsSO;
-    public Vector3       direction;
-
-
+    
 
     //Asignación de valores individuales
     public  virtual void Start()
@@ -21,9 +19,7 @@ public class BloqueBase : MonoBehaviour
         resistance  =                    1;
         material    =               "Base";
         pointsScore =                   10;
-        direction   = direction.normalized;
     }
-
 
     //Metodos a heredar
     public void Update()
@@ -35,85 +31,27 @@ public class BloqueBase : MonoBehaviour
         }
     }
 
+    //En contacto con la bola(Heredado)
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "ball")
         {
             BallCollision(collision);
-        }
-        
+        }        
     }
-
     public virtual void BallCollision(Collision collision)
     {
         GameObject ball = GameObject.FindGameObjectWithTag("ball");
         Ball force = ball.GetComponent<Ball>();
         resistance -= force.ballForce;
-        direction = collision.contacts[0].point - transform.position;
+        Vector3 direction = collision.contacts[0].point - transform.position;
         direction = direction.normalized;
-        if      (material == "Base") force.ballSpeed = 25;
-        else if (material == "Wood") force.ballSpeed = 35;
-        else if (material == "Rock") force.ballSpeed = 15;
-        else if (material == "SpecialA") force.ballSpeed = 40;
-        else if (material == "SpecialA") force.ballSpeed = 40;
-        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direction;
-       
-
+        if      (material == "Base")     force.ballSpeed = 20;
+        else if (material == "Wood")     force.ballSpeed = 30;
+        else if (material == "Rock")     force.ballSpeed = 15;
+        else if (material == "SpecialA") force.ballSpeed = 35;
+        else if (material == "SpecialB") force.ballSpeed = 35;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direction;       
     }
 
-   
-
-    
-
-   
-
-    //public int         recistencia;
-    //public int         fuerzaRebote;
-    //public UnityEvent aumentarPuntos;
-
-    ////public PuntajeAlto puntajeALtoSO;
-
-
-    //public void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "ball")
-    //    {
-    //        RebotarBola(collision);
-    //    }
-    //}
-
-    //public virtual void RebotarBola(Collision collision)
-    //{
-    //    Vector3 direccion = collision.contacts[0].point - transform.position;
-    //    direccion = direccion.normalized;
-    //    collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direccion;
-    //    recistencia--;
-    //}
-
-    //void Start()
-    //{
-
-
-    //    recistencia = 1;
-
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    DestrucionDeBloque();
-    //    RebotarBola();
-    //}
-
-    //public virtual void RebotarBola()
-    //{
-
-    //}
-
-    //public virtual void DestrucionDeBloque()
-    //{
-    //    if (recistencia <= 0) Destroy(this.gameObject);
-    //}
-
-    
 }

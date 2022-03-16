@@ -1298,7 +1298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1007353720213531236, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
       propertyPath: ballForce
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007353720213531236, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
+      propertyPath: ballSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1007353720213531236, guid: d40c677fab85b484a9f1b2c832018977, type: 3}
       propertyPath: bolaDestrida.m_PersistentCalls.m_Calls.Array.size

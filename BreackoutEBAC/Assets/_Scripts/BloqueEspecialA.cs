@@ -9,7 +9,7 @@ public class BloqueEspecialA : BloqueBase
 
     //public Padle player;
 
-    // Start is called before the first frame update
+    //Asignación de valores individuales
     public override void  Start()
     {
         resistance = 3;
