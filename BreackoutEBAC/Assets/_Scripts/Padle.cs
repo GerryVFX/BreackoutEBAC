@@ -20,6 +20,7 @@ public class Padle : MonoBehaviour
     public bool selectorControl;
 
     //Variables Bola
+    public GameObject ball_PF;
     public GameObject ball_Ob;   
     public Ball bola_S;  
     Rigidbody rigid_ball;
@@ -42,13 +43,17 @@ public class Padle : MonoBehaviour
     
     void Update()
     {
+        
 
         if (selectorControl) ControlMouse();
        else ControlTeclado();
 
-       ControlDisparo();       
+       ControlDisparo();
+
+        CrearBola();
     }
 
+    //Colisión con la bola
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "ball")
@@ -59,6 +64,19 @@ public class Padle : MonoBehaviour
         }
     }
 
+
+    public void CrearBola()
+    {
+        if (n_Balls > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                Instantiate(ball_PF);
+            }
+        }
+    }
+
+    //Metodos para el control
     public void ControlMouse()
     {
         mouse2D   = Input.mousePosition;

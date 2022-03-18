@@ -9,8 +9,13 @@ public class Ball : MonoBehaviour
     public int ballForce;
     public float ballSpeed = 20f;
     Transform transform_P;
+    public Rigidbody rigB;
 
-   
+    private void Awake()
+    {
+        rigB = GetComponent<Rigidbody>();
+    }
+
     void Start()
     {
         //Fuerza base (Normal)
@@ -24,4 +29,9 @@ public class Ball : MonoBehaviour
         transform.SetParent(transform_P);
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        var contact = collision.GetContact(0);
+        rigB.velocity = Vector2.Reflect(rigB.velocity, contact.normal);
+    }
 }
